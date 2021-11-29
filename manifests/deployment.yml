@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: oebolajisampledockerfile 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: oebolajisampledockerfile
+  template:
+    metadata:
+      labels:
+        app: oebolajisampledockerfile 
+    spec:
+      containers:
+        - name: oebolajisampledockerfile 
+          image: obafreg.azurecr.io/oebolajisampledockerfile
+          ports:
+          - containerPort: 80
